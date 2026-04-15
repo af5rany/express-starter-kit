@@ -6,7 +6,8 @@ const passport = require("passport");
 const consolidate = require("consolidate");
 const getUnixTimestamp = require("./helpers/getUnixTimestamp");
 const bodyParser = require("body-parser");
-const port = process.argv[2] || 8082;
+const flagIndex = process.argv.indexOf('-p');
+const port = flagIndex !== -1 ? process.argv[flagIndex + 1] : (process.argv[2] || 8082);
 
 /*
   Create a .env file in the root directory of your project. 
@@ -112,8 +113,9 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-// serve static files from public folder
+// serve static files from public and assets folders
 app.use(express.static(__dirname + "/public"));
+app.use("/assets", express.static(__dirname + "/assets"));
 
 // set the render engine to nunjucks
 
@@ -153,28 +155,10 @@ app.get(
 );
 
 // GET /
-// render the index page
+// render the AmanCool landing page
 
-app.get("/", async function (req, res) {
-  let userDetails = { 
-    user: req.user, 
-    isLogin: req.user 
-  }
-  if (req.user){
-    
-    const userFromDB = await SallaDatabase.retrieveUser({ email: req.user.email }, true);
-    const accessToken = userFromDB.oauthId.access_token;
-
-    const userFromAPI = await SallaAPI.getResourceOwner(accessToken);
-
-    // Merge user details with additional information from the API
-    userDetails = { ...userDetails, ...userFromAPI };
-     // mind you `req.user` content is almost the same as `user`,
-     // the main purpose of calling  `await SallaAPI.getResourceOwner(access_token) `
-     // is to show how to make calls with the access_toke
-    
-  }
-  res.render("index.html", userDetails);
+app.get("/", function (req, res) {
+  res.render("landing.html");
 });
 
 // GET /account

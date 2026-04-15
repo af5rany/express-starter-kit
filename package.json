@@ -15,7 +15,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "salla app serve",
-    "dev": "nodemon app.js"
+    "dev": "nodemon --legacy-watch app.js"
   },
   "license": "ISC",
   "dependencies": {
@@ -35,6 +35,7 @@
     "validator": "13.15.0"
   },
   "devDependencies": {
+    "nodemon": "^3.1.14",
     "sequelize-cli": "^6.6.2"
   }
 }

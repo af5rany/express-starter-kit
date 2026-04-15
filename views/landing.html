@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="html-root">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>أمان كول | جهاز تبريد وتسخين مياه الخزانات | السعودية</title>
+  <meta name="description" content="جهاز أمان كول يبرد مياه الخزان بالصيف ويسخنها بالشتاء. آمن، موفر للطاقة، وسهل التركيب. اطلب عرض سعر الحين. توصيل وتركيب في جميع مناطق المملكة.">
+  <meta name="keywords" content="تبريد مياه الخزان, تسخين مياه المنزل, ميني تشيلر منزلي, أمان كول, water tank cooler Saudi Arabia">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="أمان كول | جهاز تبريد وتسخين مياه الخزانات | السعودية">
+  <meta property="og:description" content="جهاز أمان كول يبرد مياه الخزان بالصيف ويسخنها بالشتاء. آمن، موفر للطاقة، وسهل التركيب.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://amancool.com">
+  <meta property="og:locale" content="ar_SA">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ─── CSS VARIABLES ─────────────────────────────────── */
+    :root {
+      --red:         #CF2229;
+      --dark-blue:   #113153;
+      --medium-blue: #1776B8;
+      --light-blue:  #51C0E6;
+      --pale-blue:   #C1E8FB;
+      --wa-green:    #25D366;
+      --white:       #ffffff;
+      --gray-50:     #f8fafc;
+      --gray-100:    #f1f5f9;
+      --gray-200:    #e2e8f0;
+      --gray-600:    #475569;
+      --gray-800:    #1e293b;
+    }
+
+    /* ─── RESET & BASE ──────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Noto Sans Arabic', 'Arial', sans-serif;
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--gray-800);
+      background: var(--white);
+    }
+
+    html[dir="ltr"] body { font-family: 'Arial', sans-serif; }
+
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    /* ─── TYPOGRAPHY ────────────────────────────────────── */
+    h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; line-height: 1.2; }
+    h2 { font-size: clamp(1.5rem, 3.5vw, 2.2rem); font-weight: 700; line-height: 1.3; }
+    h3 { font-size: clamp(1.1rem, 2.5vw, 1.4rem); font-weight: 600; }
+
+    /* ─── LAYOUT HELPERS ────────────────────────────────── */
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+    .section    { padding: 80px 0; }
+    .section-title {
+      text-align: center;
+      color: var(--dark-blue);
+      margin-bottom: 48px;
+      position: relative;
+    }
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: var(--red);
+      margin: 12px auto 0;
+      border-radius: 2px;
+    }
+
+    /* ─── BUTTONS ───────────────────────────────────────── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border: none;
+    }
+    .btn-whatsapp {
+      background: var(--wa-green);
+      color: var(--white);
+    }
+    .btn-whatsapp:hover { background: #1da851; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(37,211,102,0.4); }
+    .btn-outline {
+      background: transparent;
+      color: var(--medium-blue);
+      border: 2px solid var(--medium-blue);
+    }
+    .btn-outline:hover { background: var(--medium-blue); color: var(--white); }
+
+    /* ─── IMAGE PLACEHOLDERS ────────────────────────────── */
+    .img-placeholder {
+      background: linear-gradient(135deg, var(--pale-blue) 0%, #ddf0fb 100%);
+      border: 2px dashed var(--light-blue);
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      color: var(--medium-blue);
+      font-size: 0.85rem;
+      text-align: center;
+      gap: 8px;
+    }
+    .img-placeholder svg { opacity: 0.5; }
+
+    /* ════════════════════════════════════════════════════
+       1. STICKY HEADER
+    ════════════════════════════════════════════════════ */
+    #header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--white);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+      gap: 16px;
+    }
+    @media (max-width: 480px) {
+      #header img { height: 40px; }
+    }
+
+    .lang-toggle {
+      background: var(--pale-blue);
+      color: var(--dark-blue);
+      border: 2px solid var(--light-blue);
+      border-radius: 50px;
+      padding: 6px 18px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .lang-toggle:hover { background: var(--light-blue); color: var(--white); }
+
+    .header-cta {
+      background: var(--wa-green);
+      color: var(--white);
+      border-radius: 50px;
+      padding: 10px 20px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+    .header-cta:hover { background: #1da851; transform: translateY(-1px); }
+
+    /* ════════════════════════════════════════════════════
+       2. HERO SECTION
+    ════════════════════════════════════════════════════ */
+    #hero {
+      background: linear-gradient(135deg, var(--dark-blue) 0%, var(--medium-blue) 100%);
+      color: var(--white);
+      padding: 80px 0 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    #hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 600px;
+      height: 600px;
+      background: rgba(255,255,255,0.04);
+      border-radius: 50%;
+    }
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+    @media (max-width: 768px) { .hero-inner { grid-template-columns: 1fr; } }
+
+    .hero-tag {
+      display: inline-block;
+      background: var(--red);
+      color: var(--white);
+      padding: 4px 16px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    #hero h1 { color: var(--white); margin-bottom: 16px; }
+    .hero-sub {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 32px;
+      line-height: 1.8;
+    }
+    .hero-ctas {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .btn-secondary-hero {
+      background: rgba(255,255,255,0.15);
+      color: var(--white);
+      border: 2px solid rgba(255,255,255,0.4);
+      border-radius: 50px;
+      padding: 14px 28px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-secondary-hero:hover { background: rgba(255,255,255,0.25); }
+
+    .hero-image {
+      min-height: 320px;
+    }
+
+    /* Trust strip */
+    .trust-strip {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 20px 32px;
+      display: flex;
+      gap: 32px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 48px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--dark-blue);
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+    .trust-icon { font-size: 1.4rem; }
+
+    /* ════════════════════════════════════════════════════
+       3. PROBLEM SECTION
+    ════════════════════════════════════════════════════ */
+    #problem { background: var(--gray-50); }
+    .problem-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    @media (max-width: 768px) { .problem-grid { grid-template-columns: 1fr; } }
+    .pain-list { display: flex; flex-direction: column; gap: 24px; }
+    .pain-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      border-right: 4px solid var(--red);
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    html[dir="ltr"] .pain-card { border-right: none; border-left: 4px solid var(--red); }
+    .pain-emoji { font-size: 2rem; flex-shrink: 0; }
+    .pain-card h3 { color: var(--dark-blue); margin-bottom: 6px; }
+    .pain-card p { color: var(--gray-600); font-size: 0.95rem; }
+
+    .problem-visual {
+      min-height: 380px;
+    }
+
+    /* ════════════════════════════════════════════════════
+       4. SOLUTION SECTION
+    ════════════════════════════════════════════════════ */
+    #solution { background: var(--white); }
+    .solution-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+    @media (max-width: 768px) { .solution-grid { grid-template-columns: 1fr; } }
+    .solution-image { min-height: 360px; }
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 28px;
+    }
+    .benefit-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--pale-blue);
+      border-radius: 10px;
+      padding: 12px 16px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--dark-blue);
+    }
+    .benefit-icon { font-size: 1.3rem; flex-shrink: 0; }
+
+    /* ════════════════════════════════════════════════════
+       5. PRODUCT CARDS
+    ════════════════════════════════════════════════════ */
+    #products { background: var(--gray-50); }
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    @media (max-width: 900px) { .products-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; } }
+
+    .product-card {
+      background: var(--white);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      transition: transform 0.2s, box-shadow 0.2s;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+    .product-card:hover { transform: translateY(-6px); box-shadow: 0 12px 40px rgba(0,0,0,0.14); }
+
+    .product-badge {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: var(--red);
+      color: var(--white);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 50px;
+      z-index: 1;
+    }
+    html[dir="ltr"] .product-badge { right: auto; left: 16px; }
+
+    .product-image { min-height: 220px; background: var(--gray-100); }
+    .product-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+    .product-name { color: var(--dark-blue); margin-bottom: 8px; }
+    .product-desc { color: var(--gray-600); font-size: 0.9rem; margin-bottom: 20px; }
+    .product-specs {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 24px;
+      padding-top: 16px;
+      border-top: 1px solid var(--gray-200);
+    }
+    .spec-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.875rem;
+    }
+    .spec-label { color: var(--gray-600); }
+    .spec-value { font-weight: 700; color: var(--dark-blue); }
+    .product-cta { margin-top: auto; width: 100%; justify-content: center; }
+
+    /* ════════════════════════════════════════════════════
+       6. HOW IT WORKS
+    ════════════════════════════════════════════════════ */
+    #how-it-works { background: var(--white); }
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      position: relative;
+    }
+    .steps-grid::before {
+      content: '';
+      position: absolute;
+      top: 50px;
+      right: calc(16.67% + 24px);
+      left: calc(16.67% + 24px);
+      height: 2px;
+      background: var(--pale-blue);
+    }
+    @media (max-width: 768px) {
+      .steps-grid { grid-template-columns: 1fr; }
+      .steps-grid::before { display: none; }
+    }
+    .step-card { text-align: center; padding: 16px; }
+    .step-number {
+      width: 64px;
+      height: 64px;
+      background: var(--dark-blue);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin: 0 auto 20px;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 4px 16px rgba(17,49,83,0.3);
+    }
+    .step-icon-area {
+      width: 100%;
+      min-height: 160px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+    .step-card h3 { color: var(--dark-blue); margin-bottom: 10px; }
+    .step-card p { color: var(--gray-600); font-size: 0.95rem; }
+
+    /* ════════════════════════════════════════════════════
+       7. WHY AMANCOOL
+    ════════════════════════════════════════════════════ */
+    #why { background: linear-gradient(135deg, var(--dark-blue) 0%, var(--medium-blue) 100%); }
+    #why .section-title { color: var(--white); }
+    #why .section-title::after { background: var(--red); }
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 24px;
+    }
+    @media (max-width: 900px) { .trust-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 480px) { .trust-grid { grid-template-columns: 1fr; } }
+
+    .trust-card {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 16px;
+      padding: 28px 20px;
+      text-align: center;
+      color: var(--white);
+      transition: background 0.2s;
+    }
+    .trust-card:hover { background: rgba(255,255,255,0.18); }
+    .trust-card-icon { font-size: 2.5rem; margin-bottom: 16px; }
+    .trust-card h3 { margin-bottom: 8px; font-size: 1rem; }
+    .trust-card p { font-size: 0.85rem; color: rgba(255,255,255,0.8); }
+
+    /* ════════════════════════════════════════════════════
+       8. TESTIMONIALS
+    ════════════════════════════════════════════════════ */
+    #testimonials { background: var(--gray-50); }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    @media (max-width: 900px) { .testimonials-grid { grid-template-columns: 1fr; } }
+
+    .testimonial-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+      position: relative;
+    }
+    .stars { color: #f59e0b; font-size: 1.1rem; margin-bottom: 16px; }
+    .quote-mark {
+      position: absolute;
+      top: 20px;
+      left: 24px;
+      font-size: 4rem;
+      color: var(--pale-blue);
+      line-height: 1;
+      font-family: serif;
+    }
+    html[dir="rtl"] .quote-mark { right: 24px; left: auto; }
+    .testimonial-text {
+      color: var(--gray-600);
+      font-size: 0.95rem;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      position: relative;
+    }
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .author-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--pale-blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+    }
+    .author-name { font-weight: 700; color: var(--dark-blue); font-size: 0.95rem; }
+    .author-city { font-size: 0.8rem; color: var(--gray-600); }
+    .testimonial-note {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+      background: var(--pale-blue);
+      border-radius: 12px;
+      color: var(--medium-blue);
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    /* ════════════════════════════════════════════════════
+       9. FAQ
+    ════════════════════════════════════════════════════ */
+    #faq { background: var(--white); }
+    .faq-list { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+    .faq-item {
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 24px;
+      cursor: pointer;
+      background: var(--white);
+      color: var(--dark-blue);
+      font-weight: 700;
+      font-size: 1rem;
+      transition: background 0.15s;
+      gap: 12px;
+    }
+    .faq-question:hover { background: var(--gray-50); }
+    .faq-chevron {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      background: var(--pale-blue);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.25s;
+      color: var(--medium-blue);
+      font-size: 0.8rem;
+    }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); }
+    .faq-answer {
+      display: none;
+      padding: 0 24px 20px;
+      color: var(--gray-600);
+      line-height: 1.8;
+      font-size: 0.95rem;
+      border-top: 1px solid var(--gray-200);
+      padding-top: 16px;
+    }
+    .faq-item.open .faq-answer { display: block; }
+
+    /* ════════════════════════════════════════════════════
+       10. FINAL CTA BANNER
+    ════════════════════════════════════════════════════ */
+    #cta-banner {
+      background: linear-gradient(135deg, var(--dark-blue) 0%, #0d2540 100%);
+      padding: 80px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    #cta-banner::before {
+      content: '❄';
+      position: absolute;
+      font-size: 200px;
+      opacity: 0.04;
+      top: -20px;
+      right: -20px;
+    }
+    #cta-banner h2 { color: var(--white); margin-bottom: 12px; }
+    #cta-banner p { color: rgba(255,255,255,0.8); font-size: 1.1rem; margin-bottom: 32px; }
+    .cta-phone {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255,255,255,0.6);
+      font-size: 0.9rem;
+      margin-top: 20px;
+    }
+
+    /* ════════════════════════════════════════════════════
+       11. FOOTER
+    ════════════════════════════════════════════════════ */
+    #footer {
+      background: var(--dark-blue);
+      color: rgba(255,255,255,0.8);
+      padding: 56px 0 28px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    @media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; gap: 32px; } }
+    .footer-brand h3 { color: var(--white); font-size: 1.3rem; margin-bottom: 12px; }
+    .footer-brand p { font-size: 0.9rem; margin-bottom: 6px; }
+    .footer-brand a { color: var(--light-blue); }
+    .footer-col h4 { color: var(--white); margin-bottom: 16px; font-size: 1rem; }
+
+    .social-links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .social-link {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      transition: background 0.2s;
+      color: var(--white);
+    }
+    .social-link:hover { background: var(--medium-blue); }
+
+    .footer-divider {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      margin-bottom: 24px;
+    }
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 0.85rem;
+    }
+    .cr-number {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.07);
+      padding: 6px 14px;
+      border-radius: 6px;
+    }
+
+    /* ─── FLOATING WHATSAPP ─────────────────────────────── */
+    .wa-float {
+      position: fixed;
+      bottom: 24px;
+      left: 24px;
+      z-index: 999;
+      background: var(--wa-green);
+      color: var(--white);
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      box-shadow: 0 6px 24px rgba(37,211,102,0.5);
+      transition: transform 0.2s;
+    }
+    html[dir="rtl"] .wa-float { left: auto; right: 24px; }
+    .wa-float:hover { transform: scale(1.1); }
+
+    /* ─── RESPONSIVE ────────────────────────────────────── */
+    @media (max-width: 768px) {
+      .section { padding: 56px 0; }
+      .header-cta span { display: none; }
+      .trust-strip { gap: 16px; padding: 16px; }
+    }
+    @media (max-width: 480px) {
+      .header-cta span.hide-mobile { display: none; }
+      .benefits-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════
+     1. STICKY HEADER
+══════════════════════════════════════════════════ -->
+<header id="header">
+  <div class="container">
+    <nav class="header-inner">
+      <!-- Logo -->
+      <a href="/">
+        <img src="/assets/logo.png" alt="أمان كول" height="52" style="display:block;">
+      </a>
+
+      <!-- Center: Lang toggle -->
+      <button class="lang-toggle" id="lang-btn" onclick="toggleLang()" aria-label="Toggle language">
+        <span id="lang-label">EN</span>
+      </button>
+
+      <!-- Right: WhatsApp CTA -->
+      <a href="https://wa.me/966554467711?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%A8%D8%BA%D9%89%20%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%86%20%D8%AC%D9%87%D8%A7%D8%B2%20%D8%A3%D9%85%D8%A7%D9%86%20%D9%83%D9%88%D9%84"
+         target="_blank" rel="noopener" class="header-cta">
+        <span>📱</span>
+        <span data-ar="اطلب عرض سعر" data-en="Get a Quote">اطلب عرض سعر</span>
+      </a>
+    </nav>
+  </div>
+</header>
+
+
+<!-- ══════════════════════════════════════════════════
+     2. HERO SECTION
+══════════════════════════════════════════════════ -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <!-- Text -->
+      <div>
+        <span class="hero-tag" data-ar="جهاز التبريد والتسخين الذكي" data-en="Smart Cooling & Heating Device">جهاز التبريد والتسخين الذكي</span>
+        <h1 data-ar="حرارة مظبوطة… وبالك مرتاح" data-en="Perfect Temperature… Peace of Mind">حرارة مظبوطة… وبالك مرتاح</h1>
+        <p class="hero-sub" data-ar="جهاز ذكي يبرد مياه خزانك بالصيف ويسخنها بالشتاء — آمن، موفر، ويركب بدقايق" data-en="A smart device that cools your tank water in summer and heats it in winter — safe, energy-efficient, and installs in minutes">جهاز ذكي يبرد مياه خزانك بالصيف ويسخنها بالشتاء — آمن، موفر، ويركب بدقايق</p>
+        <div class="hero-ctas">
+          <a href="https://wa.me/966554467711?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%A8%D8%BA%D9%89%20%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%86%20%D8%AC%D9%87%D8%A7%D8%B2%20%D8%A3%D9%85%D8%A7%D9%86%20%D9%83%D9%88%D9%84"
+             target="_blank" rel="noopener" class="btn btn-whatsapp">
+            <span>📱</span>
+            <span data-ar="اطلب عرض سعر عبر واتساب" data-en="Get Your Quote on WhatsApp">اطلب عرض سعر عبر واتساب</span>
+          </a>
+          <a href="#products" class="btn-secondary-hero btn"
+             data-ar="شوف المنتجات" data-en="View Products">شوف المنتجات</a>
+        </div>
+      </div>
+
+      <!-- Hero Image -->
+      <div class="img-placeholder hero-image">
+        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+        </svg>
+        <span data-ar="صورة: فيلا سعودية مع جهاز أمان كول على السطح — صيف وشتاء" data-en="Hero image: Saudi villa with AmanCool device on rooftop">صورة: فيلا سعودية مع جهاز أمان كول على السطح</span>
+      </div>
+    </div>
+
+    <!-- Trust Strip -->
+    <div class="trust-strip">
+      <div class="trust-item">
+        <span class="trust-icon">🛡️</span>
+        <span data-ar="آمن 100%" data-en="100% Safe">آمن 100%</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-icon">⚡</span>
+        <span data-ar="موفر للطاقة" data-en="Energy Efficient">موفر للطاقة</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-icon">🔧</span>
+        <span data-ar="سهل التركيب" data-en="Easy Install">سهل التركيب</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-icon">🏅</span>
+        <span data-ar="+40 سنة خبرة" data-en="40+ Years Experience">+40 سنة خبرة</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     3. PROBLEM SECTION
+══════════════════════════════════════════════════ -->
+<section id="problem" class="section">
+  <div class="container">
+    <h2 class="section-title" data-ar="هل تعاني من هالمشكلة؟" data-en="Does This Sound Familiar?">هل تعاني من هالمشكلة؟</h2>
+    <div class="problem-grid">
+      <div class="pain-list">
+        <div class="pain-card">
+          <span class="pain-emoji">☀️</span>
+          <div>
+            <h3 data-ar="المشكلة بالصيف" data-en="The Summer Problem">المشكلة بالصيف</h3>
+            <p data-ar="بالصيف، مياه الخزان توصل درجات حرارة تحرق — استحمام يصير خطر على العايلة" data-en="In summer, your tank water reaches scalding temperatures — showering becomes a risk for your family">بالصيف، مياه الخزان توصل درجات حرارة تحرق — استحمام يصير خطر على العايلة</p>
+          </div>
+        </div>
+        <div class="pain-card">
+          <span class="pain-emoji">❄️</span>
+          <div>
+            <h3 data-ar="المشكلة بالشتاء" data-en="The Winter Problem">المشكلة بالشتاء</h3>
+            <p data-ar="بالشتاء، المياه تجمد والسخانات التقليدية تستهلك طاقة وتشكل خطر" data-en="In winter, water is ice-cold and traditional heaters drain energy and pose safety hazards">بالشتاء، المياه تجمد والسخانات التقليدية تستهلك طاقة وتشكل خطر</p>
+          </div>
+        </div>
+        <div class="pain-card">
+          <span class="pain-emoji">🏚️</span>
+          <div>
+            <h3 data-ar="الفلل القديمة" data-en="Older Villas">الفلل القديمة</h3>
+            <p data-ar="الفلل القديمة بدون نظام تدفئة مركزي — وش الحل؟" data-en="Older villas without central heating systems — what's the solution?">الفلل القديمة بدون نظام تدفئة مركزي — وش الحل؟</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Problem Visual -->
+      <div class="img-placeholder problem-visual">
+        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M12 2a7 7 0 017 7c0 5-7 13-7 13S5 14 5 9a7 7 0 017-7z"/><circle cx="12" cy="9" r="2.5"/>
+        </svg>
+        <span data-ar="صورة مقسمة: يسار = ترمومتر +50°م تحت شمس حارقة | يمين = دش بارد شتاء" data-en="Split image: Left = thermometer 50°C+ under scorching sun | Right = cold shower in winter">صورة مقسمة: صيف حارق ← شتاء بارد</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     4. SOLUTION / PRODUCT OVERVIEW
+══════════════════════════════════════════════════ -->
+<section id="solution" class="section">
+  <div class="container">
+    <h2 class="section-title" data-ar="الحل؟ جهاز أمان كول" data-en="The Solution? AmanCool">الحل؟ جهاز أمان كول</h2>
+    <div class="solution-grid">
+      <!-- Product Image -->
+      <div class="img-placeholder solution-image">
+        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2"/>
+        </svg>
+        <span data-ar="صورة المنتج: جهاز أمان كول ميني تشيلر — خلفية بيضاء — يظهر لوحة الترمستات الرقمي" data-en="Product photo: AmanCool Mini Chiller on white background, digital thermostat panel visible">صورة المنتج: جهاز أمان كول</span>
+      </div>
+
+      <!-- Solution Text -->
+      <div>
+        <h2 style="color:var(--dark-blue); margin-bottom:16px;" data-ar="جهاز واحد، حل كامل، طوال العام" data-en="One Device, Complete Solution, All Year Round">جهاز واحد، حل كامل، طوال العام</h2>
+        <p style="color:var(--gray-600); margin-bottom:24px;" data-ar="جهاز ميني تشيلر مبتكر يتصل بمصدر المياه الرئيسي في منزلك. يبرد المياه بالصيف ويسخنها بالشتاء — جهاز واحد، حل كامل، طوال العام." data-en="An innovative Mini Chiller device that connects to your home's main water source. It cools water in summer and heats it in winter — one device, complete solution, all year round.">جهاز ميني تشيلر مبتكر يتصل بمصدر المياه الرئيسي في منزلك. يبرد المياه بالصيف ويسخنها بالشتاء — جهاز واحد، حل كامل، طوال العام.</p>
+        <div class="benefits-grid">
+          <div class="benefit-item"><span class="benefit-icon">🛡️</span> <span data-ar="آمن 100%" data-en="100% Safe">آمن 100%</span></div>
+          <div class="benefit-item"><span class="benefit-icon">⚡</span> <span data-ar="موفر للطاقة" data-en="Energy Efficient">موفر للطاقة</span></div>
+          <div class="benefit-item"><span class="benefit-icon">🌡️</span> <span data-ar="تحكم رقمي" data-en="Digital Control">تحكم رقمي</span></div>
+          <div class="benefit-item"><span class="benefit-icon">✅</span> <span data-ar="بدون صيانة دورية" data-en="No Routine Maintenance">بدون صيانة دورية</span></div>
+          <div class="benefit-item"><span class="benefit-icon">🔧</span> <span data-ar="سهل التركيب" data-en="Easy Installation">سهل التركيب</span></div>
+          <div class="benefit-item"><span class="benefit-icon">📅</span> <span data-ar="صيف وشتاء" data-en="All Year Round">صيف وشتاء</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     5. PRODUCT CARDS
+══════════════════════════════════════════════════ -->
+<section id="products" class="section">
+  <div class="container">
+    <h2 class="section-title" data-ar="اختر الجهاز المناسب لك" data-en="Choose the Right Model for You">اختر الجهاز المناسب لك</h2>
+    <div class="products-grid">
+
+      <!-- Card 1: Compact -->
+      <div class="product-card">
+        <div class="img-placeholder product-image">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="12" r="3"/>
+          </svg>
+          <span style="font-size:0.75rem;" data-ar="صورة: أمان كول كومباكت" data-en="Photo: AmanCool Compact">صورة المنتج</span>
+        </div>
+        <div class="product-body">
+          <h3 class="product-name" data-ar="أمان كول كومباكت" data-en="AmanCool Compact">أمان كول كومباكت</h3>
+          <p class="product-desc" data-ar="مثالي للشقق والفلل الصغيرة — خزانات حتى [X] لتر" data-en="Ideal for apartments and small villas — tanks up to [X] liters">مثالي للشقق والفلل الصغيرة — خزانات حتى [X] لتر</p>
+          <div class="product-specs">
+            <div class="spec-row">
+              <span class="spec-label" data-ar="السعة" data-en="Coverage">السعة</span>
+              <span class="spec-value">[TBD] L</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label" data-ar="الطاقة" data-en="Power">الطاقة</span>
+              <span class="spec-value">[TBD] kW</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label" data-ar="الأبعاد" data-en="Dimensions">الأبعاد</span>
+              <span class="spec-value">[TBD]</span>
+            </div>
+          </div>
+          <a href="https://wa.me/966554467711?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%A8%D8%BA%D9%89%20%D8%B9%D8%B1%D8%B6%20%D8%B3%D8%B9%D8%B1%20%D9%84%D8%AC%D9%87%D8%A7%D8%B2%20%D8%A3%D9%85%D8%A7%D9%86%20%D9%83%D9%88%D9%84%20%D9%83%D9%88%D9%85%D8%A8%D8%A7%D9%83%D8%AA"
+             target="_blank" rel="noopener" class="btn btn-whatsapp product-cta">
+            <span>📱</span>
+            <span data-ar="اطلب عرض سعر" data-en="Get a Quote">اطلب عرض سعر</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 2: Standard (Best Seller) -->
+      <div class="product-card">
+        <div class="product-badge" data-ar="الأكثر مبيعًا" data-en="Best Seller">الأكثر مبيعًا</div>
+        <div class="img-placeholder product-image" style="border-top: 4px solid var(--red);">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="12" r="3"/>
+          </svg>
+          <span style="font-size:0.75rem;" data-ar="صورة: أمان كول ستاندرد" data-en="Photo: AmanCool Standard">صورة المنتج</span>
+        </div>
+        <div class="product-body">
+          <h3 class="product-name" data-ar="أمان كول ستاندرد" data-en="AmanCool Standard">أمان كول ستاندرد</h3>
+          <p class="product-desc" data-ar="الأكثر مبيعًا — مناسب لأغلب الفلل السعودية" data-en="Best seller — fits most Saudi villas">الأكثر مبيعًا — مناسب لأغلب الفلل السعودية</p>
+          <div class="product-specs">
+            <div class="spec-row">
+              <span class="spec-label" data-ar="السعة" data-en="Coverage">السعة</span>
+              <span class="spec-value">[TBD] L</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label" data-ar="الطاقة" data-en="Power">الطاقة</span>
+              <span class="spec-value">[TBD] kW</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label" data-ar="الأبعاد" data-en="Dimensions">الأبعاد</span>
+              <span class="spec-value">[TBD]</span>
+            </div>
+          </div>
+          <a href="https://wa.me/966554467711?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%A8%D8%BA%D9%89%20%D8%B9%D8%B1%D8%B6%20%D8%B3%D8%B9%D8%B1%20%D9%84%D8%AC%D9%87%D8%A7%D8%B2%20%D8%A3%D9%85%D8%A7%D9%86%20%D9%83%D9%88%D9%84%20%D8%B3%D8%AA%D8%A7%D9%86%D8%AF%D8%B1%D8%AF"
+             target="_blank" rel="noopener" class="btn btn-whatsapp product-cta">
+            <span>📱</span>
+            <span data-ar="اطلب عرض سعر" data-en="Get a Quote">اطلب عرض سعر</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 3: Pro -->
+      <div class="product-card">
+        <div class="img-placeholder product-image">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="12" r="3"/>
+          </svg>
+          <span style="font-size:0.75rem;" data-ar="صورة: أمان كول برو" data-en="Photo: AmanCool Pro">صورة المنتج</span>
+        </div>
+        <div class="product-body">
+          <h3 class="product-name" data-ar="أمان كول برو" data-en="AmanCool Pro">أمان كول برو</h3>
+          <p class="product-desc" data-ar="للفلل الكبيرة والخزانات العلوية الكبيرة" data-en="For large villas and oversized rooftop tanks">للفلل الكبيرة والخزانات العلوية الكبيرة</p>
+          <div class="product-specs">
+            <div class="spec-row">
+              <span class="spec-label" data-ar="السعة" data-en="Coverage">السعة</span>
+              <span class="spec-value">[TBD] L</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label" data-ar="الطاقة" data-en="Power">الطاقة</span>
+              <span class="spec-value">[TBD] kW</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-label" data-ar="الأبعاد" data-en="Dimensions">الأبعاد</span>
+              <span class="spec-value">[TBD]</span>
+            </div>
+          </div>
+          <a href="https://wa.me/966554467711?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%A8%D8%BA%D9%89%20%D8%B9%D8%B1%D8%B6%20%D8%B3%D8%B9%D8%B1%20%D9%84%D8%AC%D9%87%D8%A7%D8%B2%20%D8%A3%D9%85%D8%A7%D9%86%20%D9%83%D9%88%D9%84%20%D8%A8%D8%B1%D9%88"
+             target="_blank" rel="noopener" class="btn btn-whatsapp product-cta">
+            <span>📱</span>
+            <span data-ar="اطلب عرض سعر" data-en="Get a Quote">اطلب عرض سعر</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Pricing note -->
+    <p style="text-align:center; color:var(--gray-600); margin-top:28px; font-size:0.9rem;">
+      <span data-ar="💬 الأسعار تتوفر عبر واتساب فقط — تواصل معنا للحصول على عرض مخصص لاحتياجك" data-en="💬 Pricing is available via WhatsApp only — contact us for a custom quote based on your needs">💬 الأسعار تتوفر عبر واتساب فقط — تواصل معنا للحصول على عرض مخصص لاحتياجك</span>
+    </p>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     6. HOW IT WORKS
+══════════════════════════════════════════════════ -->
+<section id="how-it-works" class="section">
+  <div class="container">
+    <h2 class="section-title" data-ar="كيف يشتغل؟" data-en="How Does It Work?">كيف يشتغل؟</h2>
+    <div class="steps-grid">
+
+      <div class="step-card">
+        <div class="step-number">1</div>
+        <div class="img-placeholder step-icon-area">
+          <span style="font-size:3rem;">🔧</span>
+          <span style="font-size:0.8rem;" data-ar="أيقونة: فني يركب الجهاز على خط المياه" data-en="Icon: technician installing device on water pipe">أيقونة تركيب</span>
+        </div>
+        <h3 data-ar="نركب الجهاز" data-en="We Install">نركب الجهاز</h3>
+        <p data-ar="نركب الجهاز على مصدر المياه الرئيسي — تركيب سريع بدون تكسير" data-en="We install the device on your main water source — quick setup, no construction needed">نركب الجهاز على مصدر المياه الرئيسي — تركيب سريع بدون تكسير</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-number">2</div>
+        <div class="img-placeholder step-icon-area">
+          <span style="font-size:3rem;">🌡️</span>
+          <span style="font-size:0.8rem;" data-ar="أيقونة: إصبع يضبط ترمستات رقمي" data-en="Icon: finger adjusting digital thermostat">أيقونة ضبط الحرارة</span>
+        </div>
+        <h3 data-ar="اضبط درجة الحرارة" data-en="Set the Temperature">اضبط درجة الحرارة</h3>
+        <p data-ar="اضبط درجة الحرارة اللي تناسبك من الترمستات الرقمي داخل بيتك" data-en="Set your preferred temperature using the digital thermostat inside your home">اضبط درجة الحرارة اللي تناسبك من الترمستات الرقمي داخل بيتك</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-number">3</div>
+        <div class="img-placeholder step-icon-area">
+          <span style="font-size:3rem;">😊</span>
+          <span style="font-size:0.8rem;" data-ar="أيقونة: عيلة سعيدة، دش بحرارة مثالية" data-en="Icon: happy family enjoying perfectly tempered shower">أيقونة الاستمتاع</span>
+        </div>
+        <h3 data-ar="استمتع" data-en="Enjoy">استمتع</h3>
+        <p data-ar="استمتع بمياه بدرجة حرارة مثالية — صيف وشتاء، بدون قلق" data-en="Enjoy perfectly tempered water — summer and winter, worry-free">استمتع بمياه بدرجة حرارة مثالية — صيف وشتاء، بدون قلق</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     7. WHY AMANCOOL
+══════════════════════════════════════════════════ -->
+<section id="why" class="section">
+  <div class="container">
+    <h2 class="section-title" data-ar="ليش أمان كول؟" data-en="Why AmanCool?">ليش أمان كول؟</h2>
+    <div class="trust-grid">
+
+      <div class="trust-card">
+        <div class="trust-card-icon">🏆</div>
+        <h3 data-ar="+40 سنة خبرة" data-en="40+ Years Experience">+40 سنة خبرة</h3>
+        <p data-ar="خبرة تتجاوز 40 عامًا في مجال التبريد والتكييف" data-en="Over 40 years of experience in cooling and HVAC">خبرة تتجاوز 40 عامًا في مجال التبريد والتكييف</p>
+      </div>
+
+      <div class="trust-card">
+        <div class="trust-card-icon">🛡️</div>
+        <h3 data-ar="أمان كامل" data-en="Full Safety">أمان كامل</h3>
+        <p data-ar="أمان كامل — يتفوق على السخانات التقليدية بميزة الأمان" data-en="Full safety — outperforms traditional heaters with complete safety features">أمان كامل — يتفوق على السخانات التقليدية بميزة الأمان</p>
+      </div>
+
+      <div class="trust-card">
+        <div class="trust-card-icon">⚡</div>
+        <h3 data-ar="توفير الطاقة" data-en="Energy Saving">توفير الطاقة</h3>
+        <p data-ar="موفر للطاقة — لا يحتاج صيانة دورية" data-en="Energy efficient — no routine maintenance needed">موفر للطاقة — لا يحتاج صيانة دورية</p>
+      </div>
+
+      <div class="trust-card">
+        <div class="trust-card-icon">🔧</div>
+        <h3 data-ar="خدمة متكاملة" data-en="Full Service">خدمة متكاملة</h3>
+        <p data-ar="نبيع، نركب، ونوفر خدمة ما بعد البيع — كل شي في مكان واحد" data-en="We sell, install, and provide after-sales service — everything in one place">نبيع، نركب، ونوفر خدمة ما بعد البيع — كل شي في مكان واحد</p>
+      </div>
+
+      <div class="trust-card">
+        <div class="trust-card-icon">🗺️</div>
+        <h3 data-ar="تغطية المملكة" data-en="Nationwide Coverage">تغطية المملكة</h3>
+        <p data-ar="تغطية في جميع مناطق المملكة العربية السعودية" data-en="Coverage across all regions of Saudi Arabia">تغطية في جميع مناطق المملكة العربية السعودية</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     8. TESTIMONIALS
+══════════════════════════════════════════════════ -->
+<section id="testimonials" class="section">
+  <div class="container">
+    <h2 class="section-title" data-ar="ش قالوا عملاؤنا" data-en="What Our Customers Say">ش قالوا عملاؤنا</h2>
+    <div class="testimonials-grid">
+
+      <div class="testimonial-card">
+        <div class="quote-mark">"</div>
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text" data-ar="أفضل قرار أخذناه للبيت. الحين المياه مظبوطة صيف وشتاء. التركيب كان سريع والفريق محترف." data-en="Best decision we made for our home. Water is now perfect all year. Installation was quick and the team was professional.">أفضل قرار أخذناه للبيت. الحين المياه مظبوطة صيف وشتاء. التركيب كان سريع والفريق محترف.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">👤</div>
+          <div>
+            <div class="author-name" data-ar="[اسم العميل]" data-en="[Customer Name]">[اسم العميل]</div>
+            <div class="author-city" data-ar="الرياض" data-en="Riyadh">الرياض</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="quote-mark">"</div>
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text" data-ar="كنت أعاني من حرارة المياه بالصيف، وبعد تركيب أمان كول المشكلة انحلت نهائيًا. جهاز يستاهل." data-en="I suffered from boiling water every summer. After installing AmanCool, the problem is completely gone. Worth every riyal.">كنت أعاني من حرارة المياه بالصيف، وبعد تركيب أمان كول المشكلة انحلت نهائيًا. جهاز يستاهل.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">👤</div>
+          <div>
+            <div class="author-name" data-ar="[اسم العميل]" data-en="[Customer Name]">[اسم العميل]</div>
+            <div class="author-city" data-ar="جدة" data-en="Jeddah">جدة</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="quote-mark">"</div>
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text" data-ar="فلتنا قديمة وما فيها نظام تدفئة. أمان كول حل الموضوع بدون أي تكسير أو تعديل." data-en="Our villa is old with no heating system. AmanCool solved everything without any construction or modification.">فلتنا قديمة وما فيها نظام تدفئة. أمان كول حل الموضوع بدون أي تكسير أو تعديل.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">👤</div>
+          <div>
+            <div class="author-name" data-ar="[اسم العميل]" data-en="[Customer Name]">[اسم العميل]</div>
+            <div class="author-city" data-ar="الدمام" data-en="Dammam">الدمام</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="testimonial-note">
+      <span data-ar="⚠️ هذه شهادات تجريبية — سيتم استبدالها بشهادات عملاء حقيقية مع صورهم وتقييماتهم" data-en="⚠️ These are placeholder testimonials — to be replaced with real customer reviews including photos and ratings">⚠️ هذه شهادات تجريبية — سيتم استبدالها بشهادات عملاء حقيقية</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     9. FAQ
+══════════════════════════════════════════════════ -->
+<section id="faq" class="section" style="background:var(--gray-50);">
+  <div class="container">
+    <h2 class="section-title" data-ar="أسئلة شائعة" data-en="Frequently Asked Questions">أسئلة شائعة</h2>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span data-ar="كم ياخذ تركيب الجهاز؟" data-en="How long does installation take?">كم ياخذ تركيب الجهاز؟</span>
+          <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-answer" data-ar="التركيب سريع ويتم بواسطة فريقنا المتخصص بدون أي تكسير أو تعديلات إنشائية." data-en="Installation is quick and done by our specialized team with no construction or modifications needed.">التركيب سريع ويتم بواسطة فريقنا المتخصص بدون أي تكسير أو تعديلات إنشائية.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span data-ar="هل الجهاز يناسب جميع أنواع الخزانات؟" data-en="Does it work with all types of water tanks?">هل الجهاز يناسب جميع أنواع الخزانات؟</span>
+          <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-answer" data-ar="نعم، أمان كول متوفر بمقاسات مختلفة تناسب جميع أحجام الخزانات المنزلية." data-en="Yes, AmanCool comes in multiple sizes to fit all residential tank capacities.">نعم، أمان كول متوفر بمقاسات مختلفة تناسب جميع أحجام الخزانات المنزلية.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span data-ar="هل يحتاج صيانة دورية؟" data-en="Does it require routine maintenance?">هل يحتاج صيانة دورية؟</span>
+          <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-answer" data-ar="لا، الجهاز مصمم ليعمل بدون صيانة دورية. وفي حال احتجت أي دعم، فريقنا متوفر لخدمة ما بعد البيع." data-en="No, the device is designed to run maintenance-free. If you ever need support, our after-sales team is available.">لا، الجهاز مصمم ليعمل بدون صيانة دورية. وفي حال احتجت أي دعم، فريقنا متوفر لخدمة ما بعد البيع.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span data-ar="هل الجهاز آمن على الأطفال؟" data-en="Is it safe for children?">هل الجهاز آمن على الأطفال؟</span>
+          <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-answer" data-ar="نعم، آمن 100%. لا يوجد عناصر تسخين مكشوفة ولا غاز — يتفوق على السخانات التقليدية بميزة الأمان." data-en="Yes, 100% safe. No exposed heating elements or gas — it outperforms traditional heaters on safety.">نعم، آمن 100%. لا يوجد عناصر تسخين مكشوفة ولا غاز — يتفوق على السخانات التقليدية بميزة الأمان.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span data-ar="هل توصلون لجميع مناطق المملكة؟" data-en="Do you deliver and install across all of Saudi Arabia?">هل توصلون لجميع مناطق المملكة؟</span>
+          <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-answer" data-ar="نعم، نغطي جميع مناطق المملكة العربية السعودية — الرياض، جدة، الدمام، وغيرها." data-en="Yes, we cover all regions of Saudi Arabia — Riyadh, Jeddah, Dammam, and beyond.">نعم، نغطي جميع مناطق المملكة العربية السعودية — الرياض، جدة، الدمام، وغيرها.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     10. FINAL CTA BANNER
+══════════════════════════════════════════════════ -->
+<section id="cta-banner">
+  <div class="container">
+    <h2 data-ar="جاهز تودع مشكلة حرارة المياه؟" data-en="Ready to Say Goodbye to Water Temperature Problems?">جاهز تودع مشكلة حرارة المياه؟</h2>
+    <p data-ar="تواصل معنا الحين واحصل على استشارة مجانية" data-en="Contact us now and get a free consultation">تواصل معنا الحين واحصل على استشارة مجانية</p>
+    <a href="https://wa.me/966554467711?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%A8%D8%BA%D9%89%20%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%86%20%D8%AC%D9%87%D8%A7%D8%B2%20%D8%A3%D9%85%D8%A7%D9%86%20%D9%83%D9%88%D9%84"
+       target="_blank" rel="noopener" class="btn btn-whatsapp" style="font-size:1.1rem; padding:16px 36px;">
+      <span>📱</span>
+      <span data-ar="تواصل عبر واتساب" data-en="Chat on WhatsApp">تواصل عبر واتساب</span>
+    </a>
+    <div class="cta-phone">
+      <span>📞</span>
+      <a href="tel:+966554467711" style="color:rgba(255,255,255,0.7);">+966 55 446 7711</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     11. FOOTER
+══════════════════════════════════════════════════ -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+
+      <!-- Brand -->
+      <div class="footer-brand">
+        <img src="/assets/logo.png" alt="أمان كول" height="64" style="margin-bottom:12px; filter:brightness(0) invert(1);">
+        <h3 data-ar="أمان كول" data-en="AmanCool" style="display:none;">أمان كول</h3>
+        <p data-ar="حرارة مظبوطة… وبالك مرتاح" data-en="Perfect Temperature… Peace of Mind">حرارة مظبوطة… وبالك مرتاح</p>
+        <p style="margin-top:16px;">
+          <a href="mailto:temptech.ksa@hotmail.com">📧 temptech.ksa@hotmail.com</a>
+        </p>
+        <p><a href="tel:+966554467711">📞 +966 55 446 7711</a></p>
+        <p style="margin-top:4px;">
+          <span data-ar="📍 جدة، المملكة العربية السعودية" data-en="📍 Jeddah, Saudi Arabia">📍 جدة، المملكة العربية السعودية</span>
+        </p>
+      </div>
+
+      <!-- Social Media -->
+      <div class="footer-col">
+        <h4 data-ar="تابعنا" data-en="Follow Us">تابعنا</h4>
+        <div class="social-links">
+          <a href="https://www.instagram.com/amancool.sa/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">📷</a>
+          <a href="https://www.youtube.com/@Amancool-sa" target="_blank" rel="noopener" class="social-link" aria-label="YouTube">▶️</a>
+          <a href="https://x.com/amancool_sa" target="_blank" rel="noopener" class="social-link" aria-label="X (Twitter)">✕</a>
+          <a href="https://www.tiktok.com/@amancool.sa" target="_blank" rel="noopener" class="social-link" aria-label="TikTok">🎵</a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-col">
+        <h4 data-ar="روابط سريعة" data-en="Quick Links">روابط سريعة</h4>
+        <nav style="display:flex; flex-direction:column; gap:8px; font-size:0.9rem;">
+          <a href="#products" data-ar="المنتجات" data-en="Products">المنتجات</a>
+          <a href="#how-it-works" data-ar="كيف يشتغل؟" data-en="How It Works">كيف يشتغل؟</a>
+          <a href="#why" data-ar="ليش أمان كول؟" data-en="Why AmanCool?">ليش أمان كول؟</a>
+          <a href="#faq" data-ar="أسئلة شائعة" data-en="FAQ">أسئلة شائعة</a>
+        </nav>
+      </div>
+
+    </div>
+
+    <hr class="footer-divider">
+
+    <div class="footer-bottom">
+      <div class="cr-number">
+        <span>🏛️</span>
+        <span data-ar="سجل تجاري رقم: [CR NUMBER]" data-en="Commercial Registration No: [CR NUMBER]">سجل تجاري رقم: [CR NUMBER]</span>
+      </div>
+      <p data-ar="جميع الحقوق محفوظة © 2026 أمان كول" data-en="© 2026 AmanCool. All rights reserved.">جميع الحقوق محفوظة © 2026 أمان كول</p>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ─── FLOATING WHATSAPP BUTTON ─── -->
+<a href="https://wa.me/966554467711?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%A8%D8%BA%D9%89%20%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%86%20%D8%AC%D9%87%D8%A7%D8%B2%20%D8%A3%D9%85%D8%A7%D9%86%20%D9%83%D9%88%D9%84"
+   target="_blank" rel="noopener" class="wa-float" aria-label="WhatsApp">
+  📱
+</a>
+
+
+<!-- ─── JAVASCRIPT ─── -->
+<script>
+  // ── Language Toggle ──────────────────────────────
+  let currentLang = 'ar';
+
+  function toggleLang() {
+    currentLang = currentLang === 'ar' ? 'en' : 'ar';
+    applyLang(currentLang);
+  }
+
+  function applyLang(lang) {
+    const html = document.getElementById('html-root');
+    const label = document.getElementById('lang-label');
+
+    if (lang === 'en') {
+      html.setAttribute('lang', 'en');
+      html.setAttribute('dir', 'ltr');
+      label.textContent = 'عر';
+    } else {
+      html.setAttribute('lang', 'ar');
+      html.setAttribute('dir', 'rtl');
+      label.textContent = 'EN';
+    }
+
+    // Update all bilingual text nodes
+    document.querySelectorAll('[data-ar][data-en]').forEach(el => {
+      const text = el.getAttribute('data-' + lang);
+      if (text) {
+        // Only update text content if the element has no children elements
+        // (to avoid overwriting structure)
+        if (el.children.length === 0) {
+          el.textContent = text;
+        }
+      }
+    });
+
+    // Update FAQ answer divs (they use data attributes for translation)
+    document.querySelectorAll('.faq-answer[data-ar][data-en]').forEach(el => {
+      el.textContent = el.getAttribute('data-' + lang);
+    });
+  }
+
+  // ── FAQ Accordion ──────────────────────────────
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+
+    // Close all
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+
+    // Open clicked (if it wasn't open)
+    if (!isOpen) item.classList.add('open');
+  }
+
+  // ── Smooth scroll for anchor links ────────────
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  // ── Header shadow on scroll ────────────────────
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    header.style.boxShadow = window.scrollY > 10
+      ? '0 4px 20px rgba(0,0,0,0.12)'
+      : '0 2px 12px rgba(0,0,0,0.08)';
+  }, { passive: true });
+</script>
+
+</body>
+</html>
