@@ -132,7 +132,7 @@ app.use((req, res, next) => SallaAPI.setExpressVerify(req, res, next));
 
 // POST /webhook
 app.post("/webhook", function (req, res) {
-  console.log("Webhook received:", req.body?.event);
+  console.log("Webhook received:", JSON.stringify(req.body));
   SallaWebhook.checkActions(req.body, req.headers.authorization, {
     db: SallaDatabase,
   });
