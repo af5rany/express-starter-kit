@@ -6,6 +6,7 @@ const username = process.env.DATABASE_USERNAME; // REPLACE WITH YOUR DB USERNAME
 const password = process.env.DATABASE_PASSWORD; // REPLACE WITH YOUR DB PASSWORD
 require("./schemas/users");
 require("./schemas/oauthtokens");
+require("./schemas/products");
 
 
 const mongoServer = server == "localhost" ?

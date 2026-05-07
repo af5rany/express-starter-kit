@@ -1,35 +1,47 @@
-/**
- *  this function is executed on "app.store.authorize" action triggered by Salla .
- *
- * Action Body received from Salla
- * @param {Object} eventBody
- * { 
- *  event: 'app.store.authorize',
-    merchant: 472944967,
-    created_at: '2021-11-22 13:51:57',
-    data:
- *    {
- *      "id":1911645512,
- *      "app_name":"app name",
- *      "app_description":"desc",
- *      "app_type":"app",
- *      "app_scopes":[ 
- *        'settings.read',
- *        'customers.read_write',
- *        'orders.read_write',
- *        'carts.read',
- *        ...
- *      ],
- *      "installation_date":"2021-11-21 11:07:13"
- *    }
- * }
- * Arguments passed by you:
- * @param {Object} userArgs
- * { key:"val" }
- * @api public
- */
-module.exports = (eventBody, userArgs) => {
-  // your logic here
+const SALLA_API = "https://api.salla.dev/admin/v2";
 
-  return null;
+module.exports = async (eventBody, userArgs) => {
+  const accessToken = eventBody?.data?.token?.access_token;
+  if (!accessToken) {
+    console.error("store.authorize: no access_token in event body");
+    return;
+  }
+
+  const db = userArgs?.db;
+  if (!db?.connection) {
+    console.error("store.authorize: no DB connection");
+    return;
+  }
+
+  const Product = db.connection.Mongoose.models.Product;
+  const unsynced = await Product.find({ salla_product_id: null });
+
+  for (const product of unsynced) {
+    try {
+      const res = await fetch(`${SALLA_API}/products`, {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${accessToken}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: product.name,
+          price: { amount: product.price },
+          sku: product.sku,
+          quantity: product.stock_quantity,
+        }),
+      });
+
+      const json = await res.json();
+      const sallaId = json?.data?.id;
+
+      if (sallaId) {
+        await Product.findByIdAndUpdate(product._id, { salla_product_id: String(sallaId) });
+      } else {
+        console.error(`store.authorize: failed to sync product ${product._id}`, json);
+      }
+    } catch (err) {
+      console.error(`store.authorize: error syncing product ${product._id}:`, err.message);
+    }
+  }
 };

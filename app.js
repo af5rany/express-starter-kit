@@ -42,6 +42,9 @@ SallaWebhook.on("all", (eventBody, userArgs) => {
   // handel all events even thats not authorized
 });
 
+// Connect DB at startup so action handlers can use it
+SallaDatabase.connect().catch((err) => console.error("DB connect failed:", err));
+
 // we initialize our Salla API
 const SallaAPI = new SallaAPIFactory({
   clientID: SALLA_OAUTH_CLIENT_ID,
@@ -129,9 +132,11 @@ app.use((req, res, next) => SallaAPI.setExpressVerify(req, res, next));
 
 // POST /webhook
 app.post("/webhook", function (req, res) {
+  console.log("Webhook received:", req.body?.event);
   SallaWebhook.checkActions(req.body, req.headers.authorization, {
-    /* your args to pass to action files or listeners */
+    db: SallaDatabase,
   });
+  res.sendStatus(200);
 });
 
 // GET /oauth/redirect
@@ -201,6 +206,18 @@ app.get("/orders", ensureAuthenticated, async function (req, res) {
 app.get("/customers", ensureAuthenticated, async function (req, res) {
   res.render("customers.html", {
     customers: await SallaAPI.getAllCustomers(),
+    isLogin: req.user,
+  });
+});
+
+// GET /products
+// get all products from local DB
+
+app.get("/products", async function (req, res) {
+  const Product = SallaDatabase.connection.Mongoose.models.Product;
+  const products = await Product.find({});
+  res.render("products.html", {
+    products,
     isLogin: req.user,
   });
 });

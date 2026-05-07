@@ -1,0 +1,2 @@
+end the chat and add human handover at the end
+send email with the summery at the end

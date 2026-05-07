@@ -3,7 +3,9 @@
     "allow": [
       "Bash(node:*)",
       "Bash(node -e \":*)",
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "Bash(textutil:*)",
+      "Bash(brew list *)"
     ]
   }
 }

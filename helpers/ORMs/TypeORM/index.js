@@ -10,7 +10,7 @@ module.exports = {
       password: process.env.DATABASE_PASSWORD,
       database: process.env.DATABASE_NAME,
       synchronize: true,
-      entities: [require("./entity/oAuthToken"), require("./entity/User")],
+      entities: [require("./entity/oAuthToken"), require("./entity/User"), require("./entity/Product")],
     });
   },
 };

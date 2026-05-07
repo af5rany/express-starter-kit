@@ -1,34 +1,25 @@
-/**
- *  this function is executed on "product.quantity.low" action triggered by Salla .
- *
- * Action Body received from Salla
- * @param {Object} eventBody
- * { 
- *  event: 'product.quantity.low',
-    merchant: 472944967,
-    created_at: '2021-11-22 13:51:57',
-    data:
- *    {
- *      "id":1911645512,
- *      "app_name":"app name",
- *      "app_description":"desc",
- *      "app_type":"app",
- *      "app_scopes":[ 
- *        'settings.read',
- *        'customers.read_write',
- *        'orders.read_write',
- *        'carts.read',
- *        ...
- *      ],
- *      "installation_date":"2021-11-21 11:07:13"
- *    }
- * }
- * Arguments passed by you:
- * @param {Object} userArgs
- * { key:"val" }
- * @api public
- */
-module.exports = (eventBody, userArgs) => {
-  // your logic here
-  return null;
+module.exports = async (eventBody, userArgs) => {
+  const data = eventBody?.data;
+  if (!data?.id) return;
+
+  const db = userArgs?.db;
+  if (!db?.connection) {
+    console.error("product.quantity.low: no DB connection");
+    return;
+  }
+
+  const Product = db.connection.Mongoose.models.Product;
+
+  try {
+    const product = await Product.findOne({ salla_product_id: String(data.id) });
+    if (!product) return;
+
+    console.warn(`LOW STOCK: "${product.name}" (salla_id: ${data.id}) — quantity: ${data.quantity ?? product.stock_quantity}`);
+
+    if (data.quantity != null) {
+      await Product.findByIdAndUpdate(product._id, { stock_quantity: data.quantity });
+    }
+  } catch (err) {
+    console.error(`product.quantity.low: error for product ${data.id}:`, err.message);
+  }
 };

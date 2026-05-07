@@ -1,0 +1,21 @@
+{% extends 'layout.html' %} {% block content %}
+
+<div>
+  <div style="margin-bottom: 12px; font-size: 18px; font-weight: bold;">Products ({{ products | length }})</div>
+
+  {% if products | length == 0 %}
+  <div style="color: #a0aec0;">No products yet. Add a product from the Salla dashboard — it will appear here.</div>
+  {% endif %}
+
+  {% for product in products %}
+  <div style="border-bottom: 1px solid #4a5568; padding: 10px 0;">
+    <div>Name: <span style="font-weight: bold">{{ product.name }}</span></div>
+    <div>Price: <span style="font-weight: bold">{{ product.price }}</span></div>
+    <div>SKU: <span style="font-weight: bold">{{ product.sku or '—' }}</span></div>
+    <div>Stock: <span style="font-weight: bold">{{ product.stock_quantity }}</span></div>
+    <div>Salla ID: <span style="font-weight: bold">{{ product.salla_product_id or 'not synced' }}</span></div>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}

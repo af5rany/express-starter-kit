@@ -1,34 +1,29 @@
-/**
- *  this function is executed on "product.created" action triggered by Salla .
- *
- * Action Body received from Salla
- * @param {Object} eventBody
- * { 
- *  event: 'product.created',
-    merchant: 472944967,
-    created_at: '2021-11-22 13:51:57',
-    data:
- *    {
- *      "id":1911645512,
- *      "app_name":"app name",
- *      "app_description":"desc",
- *      "app_type":"app",
- *      "app_scopes":[ 
- *        'settings.read',
- *        'customers.read_write',
- *        'orders.read_write',
- *        'carts.read',
- *        ...
- *      ],
- *      "installation_date":"2021-11-21 11:07:13"
- *    }
- * }
- * Arguments passed by you:
- * @param {Object} userArgs
- * { key:"val" }
- * @api public
- */
-module.exports = (eventBody, userArgs) => {
-  // your logic here
-  return null;
+module.exports = async (eventBody, userArgs) => {
+  console.log("product.created payload:", JSON.stringify(eventBody?.data, null, 2));
+  const data = eventBody?.data;
+  if (!data?.id) return;
+
+  const db = userArgs?.db;
+  if (!db?.connection) {
+    console.error("product.created: no DB connection");
+    return;
+  }
+
+  const Product = db.connection.Mongoose.models.Product;
+
+  try {
+    await Product.findOneAndUpdate(
+      { salla_product_id: String(data.id) },
+      {
+        salla_product_id: String(data.id),
+        name: data.name,
+        price: data.price?.amount ?? null,
+        sku: data.sku ?? null,
+        stock_quantity: data.quantity ?? 0,
+      },
+      { upsert: true, new: true }
+    );
+  } catch (err) {
+    console.error(`product.created: error saving product ${data.id}:`, err.message);
+  }
 };
