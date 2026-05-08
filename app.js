@@ -8,6 +8,11 @@ const getUnixTimestamp = require("./helpers/getUnixTimestamp");
 const bodyParser = require("body-parser");
 const flagIndex = process.argv.indexOf('-p');
 const port = flagIndex !== -1 ? process.argv[flagIndex + 1] : (process.argv[2] || 8082);
+const storeAuthorizeHandler = require("./Actions/app/store.authorize");
+const productCreatedHandler = require("./Actions/product/created");
+const productUpdatedHandler = require("./Actions/product/updated");
+const productQuantityLowHandler = require("./Actions/product/quantity.low");
+const orderCreatedHandler = require("./Actions/order/created");
 
 /*
   Create a .env file in the root directory of your project. 
@@ -30,7 +35,11 @@ const SallaDatabase = require("./database")(SALLA_DATABASE_ORM || "Sequelize");
 const SallaWebhook = require("@salla.sa/webhooks-actions");
 
 SallaWebhook.setSecret(SALLA_WEBHOOK_SECRET);
-
+SallaWebhook.on("app.store.authorize", storeAuthorizeHandler);
+SallaWebhook.on("product.created", productCreatedHandler);
+SallaWebhook.on("product.updated", productUpdatedHandler);
+SallaWebhook.on("product.quantity.low", productQuantityLowHandler);
+SallaWebhook.on("order.created", orderCreatedHandler);
 
 // Connect DB at startup so action handlers can use it
 SallaDatabase.connect().catch((err) => console.error("DB connect failed:", err));

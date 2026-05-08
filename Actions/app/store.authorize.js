@@ -1,5 +1,4 @@
 const SALLA_API = "https://api.salla.dev/admin/v2";
-
 const WEBHOOK_EVENTS = [
   "product.created",
   "product.updated",
@@ -11,21 +10,17 @@ const WEBHOOK_EVENTS = [
 
 module.exports = async (eventBody, userArgs) => {
   console.log("🟢 store.authorize handler INVOKED, event=", eventBody?.event);
+
   const accessToken = eventBody?.data?.access_token;
   if (!accessToken) {
     console.error("store.authorize: no access_token in event body");
     return;
   }
 
-  const db = userArgs?.db;
-  if (!db?.connection) {
-    console.error("store.authorize: no DB connection");
-    return;
-  }
-
   const appUrl = process.env.APP_URL || "https://tabreed-1mho.onrender.com";
   const webhookUrl = `${appUrl}/webhook`;
 
+  // 1) Register webhooks — doesn't need DB
   for (const event of WEBHOOK_EVENTS) {
     try {
       const res = await fetch(`${SALLA_API}/webhooks/subscribe`, {
@@ -52,9 +47,15 @@ module.exports = async (eventBody, userArgs) => {
     }
   }
 
+  // 2) Now sync products — needs DB
+  const db = userArgs?.db;
+  if (!db?.connection) {
+    console.error("store.authorize: no DB connection, skipping product sync");
+    return;
+  }
+
   const Product = db.connection.Mongoose.models.Product;
   const unsynced = await Product.find({ salla_product_id: null });
-
   for (const product of unsynced) {
     try {
       const res = await fetch(`${SALLA_API}/products`, {
@@ -70,10 +71,8 @@ module.exports = async (eventBody, userArgs) => {
           quantity: product.stock_quantity,
         }),
       });
-
       const json = await res.json();
       const sallaId = json?.data?.id;
-
       if (sallaId) {
         await Product.findByIdAndUpdate(product._id, { salla_product_id: String(sallaId) });
       } else {
