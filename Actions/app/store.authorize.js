@@ -11,7 +11,7 @@ const WEBHOOK_EVENTS = [
 
 module.exports = async (eventBody, userArgs) => {
   console.log("🟢 store.authorize handler INVOKED, event=", eventBody?.event);
-  const accessToken = eventBody?.data?.token?.access_token;
+  const accessToken = eventBody?.data?.access_token;
   if (!accessToken) {
     console.error("store.authorize: no access_token in event body");
     return;

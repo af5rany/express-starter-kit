@@ -31,16 +31,6 @@ const SallaWebhook = require("@salla.sa/webhooks-actions");
 
 SallaWebhook.setSecret(SALLA_WEBHOOK_SECRET);
 
-// Add Listeners
-SallaWebhook.on("app.installed", (eventBody, userArgs) => {
-  // handel app.installed event
-});
-SallaWebhook.on("app.store.authorize", (eventBody, userArgs) => {
-  // handel app.installed event
-});
-SallaWebhook.on("all", (eventBody, userArgs) => {
-  // handel all events even thats not authorized
-});
 
 // Connect DB at startup so action handlers can use it
 SallaDatabase.connect().catch((err) => console.error("DB connect failed:", err));
