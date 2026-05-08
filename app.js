@@ -222,6 +222,26 @@ app.get("/products", async function (req, res) {
   });
 });
 
+// GET /debug/webhooks
+// returns Salla webhook subscriptions for most recent stored merchant token
+app.get("/debug/webhooks", async function (req, res) {
+  if (req.query.key !== process.env.DEBUG_KEY) {
+    return res.status(403).json({ error: "forbidden" });
+  }
+  try {
+    const OauthToken = SallaDatabase.connection.Mongoose.models.oAuthToken;
+    const token = await OauthToken.findOne({}).sort({ createdAt: -1 });
+    if (!token) return res.status(404).json({ error: "no token stored" });
+    const response = await fetch("https://api.salla.dev/admin/v2/webhooks/subscriptions", {
+      headers: { Authorization: `Bearer ${token.access_token}` },
+    });
+    const json = await response.json();
+    res.json(json);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 // GET /logout
 //   logout from passport
 app.get("/logout", function (req, res) {
