@@ -5,7 +5,10 @@
       "Bash(node -e \":*)",
       "Bash(npm install:*)",
       "Bash(textutil:*)",
-      "Bash(brew list *)"
+      "Bash(brew list *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)"
     ]
   }
 }
